@@ -1,44 +1,49 @@
 <html>
   <head>
     <title>The Acme Movie Generator</title>
-    <script src='/dist/main.js' defer></script>
-<style>
-main > button {
-  height: 3rem;
-  width: 100%;
-  font-weight: bold;
-}
-body {
-  font-family: verdana;
-}
-button {
-  height: 2rem;
-}
-
-li button:first-child {
-  background-color: tomato;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  padding: 0.5rem;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  border: solid 1px gray;
-  margin: 1rem;
-}
-li > div {
-  display: flex;
-  justify-content: space-around;
-}
-li > div > * {
-}
-</style>
+    <script src="/dist/main.js" defer></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: darkslategray;
+        color: darkturquoise;
+        text-align: center;
+        margin-left: 0;
+      }
+      h1 {
+        text-decoration: underline;
+      }
+      ul {
+        display: flex;
+        list-style-type: none;
+        flex-wrap: wrap;
+      }
+      li {
+        flex:1;
+        border: 1px black solid;
+        padding: 1rem;
+        text-align: center;
+        margin-right: 0;
+      }
+      button {
+        padding: 0.25rem;
+        margin: 0.5rem;
+        width: 75%;
+        background-color:darkslategray;
+        font-weight: bolder;
+        color:lightseagreen;
+        font-size: 1rem;
+      }
+      .increment-button {
+        width: 18%;
+      }
+      .movie-name {
+        font-size: 0.25 rem;
+      }
+    </style>
   </head>
+
   <body>
-    <div id='root'></div>
+    <div id="root"></div>
   </body>
 </html>
