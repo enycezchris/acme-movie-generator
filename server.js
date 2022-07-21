@@ -49,6 +49,7 @@ app.put("/api/movies/:id", async function (req, res, next) {
   try {
     const movie = await Movie.findByPk(req.params.id);
     await movie.update(req.body);
+    res.send(movie);
   } catch (e) {
     next(e);
   }

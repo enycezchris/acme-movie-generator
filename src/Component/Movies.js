@@ -43,7 +43,7 @@ const Movies = ({ movies, deleteMovie, increment }) => {
           {console.log("length", movies.length)}
           Average Rating of all Movies is : (
           {movies.reduce(
-            (total, movie) => Math.floor(movie.rating + total / movies.length ),
+            (total, movie) => Math.floor(movie.rating + total / movies.length),
             0
           )}
           )
@@ -63,11 +63,11 @@ const mapDispatch = (dispatch) => {
       dispatch(deleteMovie(movie));
     },
     updateMovie: (movie, movieId) => {
-      movie = { ...movie, movieId: movieId * 1 };
+      movie = {...movie, movieId: movieId * 1 };
       dispatch(updateMovie(movie));
     },
     increment: (movie, direction) => {
-      movie = { ...movie, rating: movie.rating + direction };
+      movie = {...movie, rating: movie.rating + direction };
       dispatch(updateMovie(movie));
     },
   };
